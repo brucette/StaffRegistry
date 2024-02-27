@@ -1,6 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.CompilerServices;
 
+// Klasser: Employee, Database
+// Attribut på Employee: firstName, lastName, salary - metoder på Employee: PrintEmployeeDetails()
+// Attribut på Database: employees array för att lagra personelluppgifterna - metoder på Database: AddEmployee(), ShowEmployees()
+
+
 namespace StaffRegistry
 {
     internal class Program
