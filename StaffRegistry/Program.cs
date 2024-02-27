@@ -7,30 +7,30 @@ namespace StaffRegistry
     {
         static void Main(string[] args)
         {
-            //bool keepEntering = true;
-            //while (keepEntering) 
-            //{
-            //    Console.WriteLine("Enter first name: ");
-            //}
-
-            Console.WriteLine("Enter first name: ");
-            string fname = Console.ReadLine()!;
-
-            Console.WriteLine("Enter last name: ");
-            string lname = Console.ReadLine()!;
-
-            Console.WriteLine("Enter salary: ");
-            int monthSal = int.Parse(Console.ReadLine()!);
-
-            Employee enteredEmp = new Employee(fname, lname, monthSal);
-
             Database registry = new Database();
 
-            registry.AddEmployee(enteredEmp);
-            registry.ShowEmployees();
+            string choice = "y"; 
 
-            //Console.WriteLine("{0} {1} {2}", fname, lname, monthSal);
-           
+            while (choice == "y")
+            {
+                Console.WriteLine();
+                Console.WriteLine("Enter first name: ");
+                string fname = Console.ReadLine()!;
+
+                Console.WriteLine("Enter last name: ");
+                string lname = Console.ReadLine()!;
+
+                Console.WriteLine("Enter salary: ");
+                int monthSal = int.Parse(Console.ReadLine()!);
+
+                Employee enteredEmp = new Employee(fname, lname, monthSal);
+
+                registry.AddEmployee(enteredEmp);
+
+                Console.WriteLine("Continue (y/n): ");
+                choice = Console.ReadLine();
+            }
+            registry.ShowEmployees();
         }
     }
 
